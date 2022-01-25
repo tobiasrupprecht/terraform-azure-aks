@@ -5,12 +5,12 @@ variable "location" {
 
 variable "name" {
   description = "Name of the AKS Cluster"
-  default = "AKS_Cluster"
+  default = "AKS-Cluster"
 }
 
 variable "prefix_name" {
   description = "Facility Location / Department that deploys AKS Cluster. Prefix for the name of the AKS Cluster"
-  default = "Sindelfingen_03"
+  default = "SI-03"
 }
 
 variable "environment" {
