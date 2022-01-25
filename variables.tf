@@ -18,25 +18,10 @@ variable "environment" {
   default = "Dev"
 }
 
+variable "appId" {
+  description = "Azure Kubernetes Service Cluster service principal"
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#variable "appId" {
-#  description = "Azure Kubernetes Service Cluster service principal"
-#}
-
-#variable "password" {
-#  description = "Azure Kubernetes Service Cluster password"
-#}
+variable "password" {
+  description = "Azure Kubernetes Service Cluster password"
+}
