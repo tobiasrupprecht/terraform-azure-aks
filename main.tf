@@ -12,6 +12,7 @@ provider "azurerm" {
   features {}
 }
 
+# Deploy Resource Group
 resource "azurerm_resource_group" "default" {
   name     = "${var.prefix_name}-${var.name}-rg"
   location = var.location
@@ -21,6 +22,7 @@ resource "azurerm_resource_group" "default" {
   }
 }
 
+# Deploy Kubernetes Cluster (AKS)
 resource "azurerm_kubernetes_cluster" "default" {
   name                = "${var.prefix_name}-${var.name}"
   location            = azurerm_resource_group.default.location
