@@ -41,7 +41,7 @@ resource "azurerm_kubernetes_cluster" "default" {
     client_secret = var.password
   }
 
-  role_based_access_control {
+  role_based_access_control_enabled {
     enabled = true
   }
 
