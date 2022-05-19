@@ -1,11 +1,11 @@
 output "resource_group_name" {
   description = "Resource Group Name"
-  value = azurerm_resource_group.default.name
+  value       = azurerm_resource_group.default.name
 }
 
 output "kubernetes_cluster_name" {
   description = "Kubernetes Cluster Name"
-  value = azurerm_kubernetes_cluster.default.name
+  value       = azurerm_kubernetes_cluster.default.name
 }
 
 #output "host" {
