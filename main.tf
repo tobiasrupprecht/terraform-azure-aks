@@ -28,6 +28,7 @@ resource "azurerm_kubernetes_cluster" "default" {
   location            = azurerm_resource_group.default.location
   resource_group_name = azurerm_resource_group.default.name
   dns_prefix          = "${var.prefix_name}-${var.name}-k8s"
+  role_based_access_control_enabled = true
 
   default_node_pool {
     name            = "default"
@@ -41,9 +42,9 @@ resource "azurerm_kubernetes_cluster" "default" {
     client_secret = var.password
   }
 
-  role_based_access_control_enabled {
-    enabled = true
-  }
+#  role_based_access_control_enabled {
+#    enabled = true
+#  }
 
   tags = {
     environment = var.environment
